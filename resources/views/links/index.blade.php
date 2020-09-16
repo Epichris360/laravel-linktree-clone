@@ -25,8 +25,10 @@
                                     <td>
                                         <a href="{{ $link->link }}">{{ $link->link }}</a>
                                     </td>
-                                    <td>0</td>
-                                    <td>Aug 13, 2020 - 10:58</td>
+                                    <td>{{ $link->visits_count }}</td>
+                                    <td>
+                                        {{ $link->latest_visit ? $link->latest_visit->created_at->format('M j Y - H:ia') : 'N/A' }}
+                                    </td>
                                     <td>
                                         <a href="/dashboard/links/{{ $link->id }}">
                                             Edit

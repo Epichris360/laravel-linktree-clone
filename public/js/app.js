@@ -37266,6 +37266,19 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+$(".user-link").click(function (e) {
+  // store the visit async 
+  var linkId = $(this).data('link-id');
+  var linkUrl = $(this).attr('href');
+  axios.post('/visit/' + linkId, {
+    link: linkUrl
+  }).then(function (res) {
+    return console.log('res: ', res);
+  })["catch"](function (err) {
+    return console.log(err);
+  });
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

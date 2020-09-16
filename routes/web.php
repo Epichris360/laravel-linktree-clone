@@ -30,3 +30,5 @@ Route::get('/{user}', [UserController::class, 'show']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+// 37:54 where im at with the video
+// do some more laravel tuts and learn php. then look into getting laracasts
